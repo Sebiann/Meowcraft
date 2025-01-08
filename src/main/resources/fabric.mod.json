@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "meowcraft",
+  "version": "${version}",
+  "name": "meowcraft",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/meowcraft/icon.png",
+  "environment": "server",
+  "entrypoints": {
+    "main": [
+      "moe.sebiann.meowcraft.Meowcraft"
+    ]
+  },
+  "mixins": [
+    "meowcraft.mixins.json",
+    {
+      "config": "meowcraft.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "java": ">=21",
+    "minecraft": "${minecraft_version}"
+  }
+}
