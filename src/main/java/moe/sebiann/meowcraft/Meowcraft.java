@@ -67,7 +67,7 @@ public class Meowcraft implements ModInitializer {
 
         try {
             // Execute the /item modify command
-            source.getServer().getCommandManager().executeWithPrefix(source, command);
+            source.getServer().getCommandManager().executeWithPrefix(source.getServer().getCommandSource(), command);
             source.sendFeedback(() -> Text.literal("Successfully applied reskin: " + option), false);
         } catch (Exception e) {
             source.sendError(Text.literal("Error running reskin command: " + e.getMessage()));
